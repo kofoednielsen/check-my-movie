@@ -80,7 +80,7 @@ namespace CheckMyMovie.Controllers
             {
                 var requestUrl = $"{MOVIE_API_ADDRESS}i={id}";
                 HttpResponseMessage response = await client.GetAsync(requestUrl);
-                var jsonString = response.Content.ReadAsStringAsync().Result;
+                var jsonString = await response.Content.ReadAsStringAsync();
                 response.EnsureSuccessStatusCode();
                 movie = JsonConvert.DeserializeObject<Movie>(jsonString);
                 return movie;
