@@ -66,7 +66,7 @@ namespace CheckMyMovie.Controllers
 
             //Get the valid fetched movies, that returned an ID.
             var fetchedMovies = tasks.Where(t => t.Result.ID != null).Select(t => t.Result);
-            await context.AddRangeAsync(movies);
+            await context.AddRangeAsync(fetchedMovies);
             await context.SaveChangesAsync();
             movies.AddRange(fetchedMovies);
             return movies;
