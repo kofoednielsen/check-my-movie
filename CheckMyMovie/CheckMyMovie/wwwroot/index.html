@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>
+        CheckMyMovie
+    </title>
+</head>
+<style>
+.checked {
+  color: orange;
+}
+</style>
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Please enter some IMDB Id's</h1>
+            <input type="text" id="id-box" class="form-control"  placeholder="Comma seperated like this: tt0111161, ww934812" aria-describedby="basic-addon1">
+            <a id="search-button" class="btn btn-primary my-2">Search</a>
+        </div>
+    </section>
+
+    <div class="album py-4 bg-light">
+        <div class="container">
+            <div class="row" id="movie-container">
+            </div>
+        </div>
+    </div>
+
+</main>
+<script src="app.js"></script>
