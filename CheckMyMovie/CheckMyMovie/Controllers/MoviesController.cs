@@ -58,6 +58,7 @@ namespace CheckMyMovie.Controllers
                 }
                 else
                 {
+                    movie.FromLocalDatabase = true;
                     movies.Add(movie);
                 }
             }

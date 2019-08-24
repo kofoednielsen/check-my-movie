@@ -39,6 +39,7 @@ function renderMovie(movieData) {
                 <div class="checkbox">
                     <label><input onClick="checkboxClick('${movieData.imdbID}', this)" type="checkbox" value="" ${movieData.Checked ? "Checked" : ""}> Check</label>
                 </div>
+                <small>${movieData.FromLocalDatabase ? "source: localdb" : "source: imdb"}</small>
                 <small class="text-muted">${movieData.RunTime}</small>
             </div>
         </div>

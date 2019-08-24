@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -22,5 +23,9 @@ namespace CheckMyMovie.Models
         public string RunTime { get; set; }
         [JsonProperty(PropertyName = "Checked")]
         public bool Checked { get; set; } = false;
+        //Database should ignore this property
+        [NotMapped]
+        [JsonProperty(PropertyName = "FromLocalDatabase")]
+        public bool FromLocalDatabase { get; set; } = false;
     }
 }
